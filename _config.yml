@@ -20,19 +20,15 @@
 
 title: Jae Goo Choy
 name: Jae Goo Choy
-position: Research Scientist 
-email: dp9jalxhq@mozmail.com
+position: PhD candidate
+email: jaegu.choy@rllab.snu.ac.kr
 description: >-
-  I am a research scientist at [Google](https://ai.google/research/), where I work on photorealistic 3D reconstruction at internet scale.
-
-
-  Previously, I was a Ph. D student at the [University of Washington](https://grail.cs.washington.edu/) advised by
-  [Ali Farhadi](https://homes.cs.washington.edu/~ali/) and
-  [Steve Seitz](https://homes.cs.washington.edu/~seitz/).
+  I am a grduate stuent at [RLLAB](https://rllab.snu.ac.kr), where I work on robotics and computer vision.
+  
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://keunhong.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: KeunhongP
-github_username: keunhong
+url: 
+twitter_username:
+github_username: choonski93
 google_scholar: HVZb-5oAAAAJ
 google_analytics: G-MFWSBLRKG0
 
