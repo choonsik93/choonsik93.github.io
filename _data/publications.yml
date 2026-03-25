@@ -2,8 +2,8 @@
   title: "Unsupervised 3D Part Decomposition via Leveraged Gaussian Splatting"
   venue: IROS, 2024
   description: "We propose a method for unsupervised 3D part decomposition of articulated objects using Gaussian Splatting."
-  project_page: "https://choonsik93.github.io/mcpd/"
-  arxiv:
+  project_page: "https://choonsik93.github.io/artnerf/"
+  github: choonsik93/ArtGS
   image: u3dpd.jpg
   authors:
     - jaegoo
@@ -27,7 +27,7 @@
   title: "Unsupervised 3D Link Segmentation of Articulated Objects with a Mixture of Coherent Point Drift"
   venue: IEEE RA-L / IROS, 2022
   description: "We present a mixture of coherent point drift method for unsupervised 3D link segmentation of articulated objects."
-  project_page: "https://choonsik93.github.io/mcpd/"
+  project_page: "https://choonsik93.github.io/mcpd.github.io/"
   github: choonsik93/mcpd
   image: mcpd.jpg
   authors:
