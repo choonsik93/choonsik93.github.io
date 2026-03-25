@@ -42,6 +42,8 @@
   title: "No-Regret Shannon Entropy Regularized Neural Contextual Bandit Online Learning for Robotic Grasping"
   venue: IROS, 2020
   description: "Applying Shannon entropy regularized contextual bandits for sample-efficient robotic grasping."
+  pdf: "https://rllab.snu.ac.kr/publications/papers/2020_iros_sern.pdf"
+  video: "https://www.youtube.com/watch?v=wRZcKcv5nbw"
   image: noregret.jpg
   authors:
     - kyungjae
@@ -64,7 +66,9 @@
   title: "Hierarchical 6-DoF Grasping with Approaching Direction Selection"
   venue: ICRA, 2020
   description: "A hierarchical framework for 6-DoF grasping that selects approaching directions for robust grasp planning."
-  image: h6dof.jpg
+  pdf: "https://rllab.snu.ac.kr/publications/papers/2020_icra_gads.pdf"
+  video: "https://www.youtube.com/watch?v=UAqcV1DeRjE"
+  image_mouseover: gads.mp4
   authors:
     - yunho
     - hogun

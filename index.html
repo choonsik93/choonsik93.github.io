@@ -183,6 +183,14 @@ layout: null
                 </a>
               </span>
               {% endif %}
+              {% if pub.video %}
+              <span class="link-block">
+                <a class="external-link button is-small is-rounded is-link" href="{{ pub.video }}">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
+              {% endif %}
               {% if pub.github %}
               <span class="link-block">
                 <a class="external-link button is-small is-rounded is-link" href="https://github.com/{{ pub.github }}">
