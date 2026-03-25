@@ -1,0 +1,169 @@
+\documentclass[10pt]{article}
+
+\usepackage[margin=1in, bottom=1.2in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{titlesec}
+
+% Font: Computer Modern (LaTeX default)
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+% Link colors
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+% Section formatting: small caps, with horizontal rule
+\titleformat{\section}
+  {\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{6pt}
+
+% Footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\rfoot{JaeGoo Choy}
+\cfoot{\thepage\ of \pageref*{LastPage}}
+
+\begin{document}
+
+%% Header
+{\LARGE \textbf{JaeGoo Choy}} \hfill \\[2pt]
+\texttt{jaegoo.choy@carbonblackgroup.com} \hfill \url{https://choonsik93.github.io} \\
+\url{https://scholar.google.com/citations?user=p18VKWgAAAAJ} \hfill \url{https://github.com/choonsik93}
+
+%% Current Position
+\section{Current Position}
+\textbf{Carbon Black Group} \hfill Dec 2025 -- Present \\
+Entrepreneur in Residence (EIR)
+
+%% Education
+\section{Education}
+\textbf{Seoul National University} \hfill Sep 2017 -- Feb 2024 \\
+Ph.D. in Electrical and Computer Engineering (Advisor: Prof.\ Songhwai Oh)
+
+\textbf{Seoul National University} \hfill Mar 2013 -- Aug 2017 \\
+B.B.A. (Double Major), College of Business Administration
+
+\textbf{Seoul National University} \hfill Mar 2011 -- Aug 2017 \\
+B.S. in Electrical and Computer Engineering
+
+%% Work Experience
+\section{Work Experience}
+\textbf{Carbon Black Group} \hfill Dec 2025 -- Present \\
+Entrepreneur in Residence (EIR)
+
+\textbf{Sequor Robotics} \hfill Mar 2024 -- Nov 2025 \\
+Research Scientist
+
+\textbf{Seoul National University, RLLAB} \hfill Sep 2017 -- Feb 2024 \\
+Graduate Research Assistant
+
+%% Research Interests
+\section{Research Interests}
+Robotics, Computer Vision, 3D Scene Understanding, Articulated Object Modeling, Reinforcement Learning
+
+%% Conference Papers
+\section{Conference Papers}
+\begin{enumerate}[label={[C\arabic*]}, leftmargin=2.5em, itemsep=4pt]
+  \setcounter{enumi}{5}
+
+  \item \textbf{JaeGoo Choy}, Geonho Cha, Hogun Kee, and Songhwai Oh,
+  ``Unsupervised 3D Part Decomposition via Leveraged Gaussian Splatting,''
+  in \textit{Proc.\ of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 2024.
+
+  \setcounter{enumi}{4}
+  \item Hogun Kee, Minjae Kang, Dohyeong Kim, \textbf{JaeGoo Choy}, and Songhwai Oh,
+  ``SDF-Based Graph Convolutional Q-Networks for Rearrangement of Multiple Objects,''
+  in \textit{Proc.\ of the IEEE International Conference on Robotics and Automation (ICRA)}, May 2023.
+
+  \setcounter{enumi}{3}
+  \item \textbf{JaeGoo Choy}, Geonho Cha, and Songhwai Oh,
+  ``Unsupervised 3D Link Segmentation of Articulated Objects with a Mixture of Coherent Point Drift,''
+  in \textit{Proc.\ of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, Oct.\ 2022. (RA-L option)
+
+  \setcounter{enumi}{2}
+  \item Kyungjae Lee, \textbf{JaeGoo Choy}, Yunho Choi, Hogun Kee, and Songhwai Oh,
+  ``No-Regret Shannon Entropy Regularized Neural Contextual Bandit Online Learning for Robotic Grasping,''
+  in \textit{Proc.\ of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, Oct.\ 2020.
+
+  \setcounter{enumi}{1}
+  \item \textbf{JaeGoo Choy}, Kyungjae Lee, and Songhwai Oh,
+  ``Sparse Actor-Critic: Sparse Tsallis Entropy Regularized Reinforcement Learning in a Continuous Action Space,''
+  in \textit{Proc.\ of the International Conference on Ubiquitous Robots (UR)}, Jun.\ 2020.
+
+  \setcounter{enumi}{0}
+  \item Yunho Choi, Hogun Kee, Kyungjae Lee, \textbf{JaeGoo Choy}, and Songhwai Oh,
+  ``Hierarchical 6-DoF Grasping with Approaching Direction Selection,''
+  in \textit{Proc.\ of the IEEE International Conference on Robotics and Automation (ICRA)}, May 2020.
+
+\end{enumerate}
+
+%% Journal Papers
+\section{Journal Papers}
+\begin{enumerate}[label={[J\arabic*]}, leftmargin=2.5em, itemsep=4pt]
+  \item \textbf{JaeGoo Choy}, Geonho Cha, and Songhwai Oh,
+  ``Unsupervised 3D Link Segmentation of Articulated Objects with a Mixture of Coherent Point Drift,''
+  in \textit{IEEE Robotics and Automation Letters (RA-L)}, vol.~7, no.~3, pp.~7124--7131, Jul.\ 2022.
+\end{enumerate}
+
+%% Domestic Publications
+\section{Domestic Publications}
+\begin{enumerate}[label={[D\arabic*]}, leftmargin=2.5em, itemsep=4pt]
+  \setcounter{enumi}{1}
+  \item \textbf{JaeGoo Choy} and Songhwai Oh,
+  ``Generation of a Simple Kinematic Model of an Articulated Object by Approximating a Point Set to a Set of Ellipsoids,''
+  \textit{KCSE Summer Conference}, Aug.\ 2022.
+
+  \setcounter{enumi}{0}
+  \item Jeongho Park, \textbf{JaeGoo Choy}, and Songhwai Oh,
+  ``Memory Efficient Reinforcement Learning for Multi-tasks with Deep Virtual Q-Networks,''
+  \textit{KCSE Summer Conference}, Aug.\ 2020.
+\end{enumerate}
+
+%% Honors and Awards
+\section{Honors and Awards}
+Brain Korea 21 Plus Scholarship, Seoul National University \hfill 2021 -- 2023 \\
+Summa Cum Laude, Seoul National University \hfill 2017
+
+%% Research Experience
+\section{Research Experience}
+\textbf{Development of Brain-Inspired AI with Human-Like Intelligence} \hfill Mar 2019 -- Dec 2022 \\
+Ministry of Science and ICT (MSIT) -- Team Lead \\
+Development of machine learning techniques based on real-world interactions simulating brain and cognitive development.
+
+\textbf{Samsung Manipulation Robot} \hfill May 2019 -- Nov 2019 \\
+Samsung Electronics Co., Ltd. \\
+Development of simulated manipulation task environments and robust bin-picking action learning.
+
+\textbf{Realistic 4D Reconstruction of Dynamic Objects} \hfill Sep 2017 -- Feb 2019 \\
+Ministry of Science, ICT, and Future Planning (MSIT) \\
+Development of signed distance field inferencing algorithms.
+
+%% Teaching Experience
+\section{Teaching Experience}
+\textbf{Teaching Assistant, Seoul National University}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, topsep=2pt]
+  \item Deep Reinforcement Learning \hfill Spring 2020
+  \item Introduction to IoT$\cdot$AI$\cdot$Big Data Course \hfill Spring 2019
+  \item Introduction to Deep Learning, SNU Big Data Academy \hfill Fall 2018
+  \item Introduction to Intelligent Systems \hfill Fall 2017, Fall 2018
+\end{itemize}
+
+%% Skills
+\section{Skills}
+\textbf{Programming:} Python, PyTorch, TensorFlow, C++/C, CUDA, mmengine \\
+\textbf{Languages:} Korean, English
+
+%% Project Pages
+\section{Project Pages}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, topsep=2pt]
+  \item \url{https://choonsik93.github.io/artnerf/}
+  \item \url{https://choonsik93.github.io/mcpd.github.io/}
+\end{itemize}
+
+\end{document}
