@@ -1,253 +1,259 @@
----
-layout: null
----
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JaeGoo Choy</title>
 
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <title>{{ site.name }}</title>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  {% if site.google_analytics %}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', '{{ site.google_analytics }}');
-  </script>
-  {% endif %}
-
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
-  <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
-  <script src="{{ '/js/index.js' | relative_url }}"></script>
+  <style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 15px;
+      padding-top: 20px;
+    }
+    .container {
+      max-width: 850px;
+    }
+    a { color: #1772d0; }
+    a:hover { color: #f09228; text-decoration: none; }
+    .name { font-size: 28px; font-weight: 700; padding-bottom: 8px; }
+    .bio { text-align: justify; }
+    .section-title { font-size: 22px; font-weight: 700; padding-top: 10px; padding-bottom: 5px; }
+    .pub-row { padding-bottom: 20px; }
+    .pub-title { font-weight: 600; font-size: 15px; }
+    .pub-authors { font-size: 14px; }
+    .pub-venue { font-size: 14px; }
+    .pub-links { font-size: 13px; padding-top: 3px; }
+    .pub-links a { margin-right: 8px; }
+    .pub-img { border: 1px solid #ddd; border-radius: 4px; }
+    .pub-img:hover { opacity: 0.85; }
+    .pub-video {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 100%;
+      height: auto;
+    }
+    .portrait {
+      border-radius: 50%;
+      max-width: 200px;
+      width: 100%;
+    }
+    .icon-links a {
+      font-size: 14px;
+      margin-right: 12px;
+      color: #333;
+    }
+    .icon-links a:hover { color: #1772d0; }
+    .edu-entry { padding-bottom: 8px; }
+    hr { border-top: 1px solid #ddd; }
+    .footer-text { font-size: 12px; color: #999; text-align: center; padding: 20px 0; }
+    @media (max-width: 768px) {
+      .portrait-col { text-align: center; padding-bottom: 20px; }
+      .portrait { max-width: 160px; }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
 
-  <section class="hero">
-    <div class="hero-body container is-max-desktop">
-      <div class="columns is-vcentered">
-
-        <div class="column is-4">
-          <div class="portrait">
-            <img src="{{ '/images/portrait.jpg' | relative_url }}" />
-          </div>
+    <!-- Bio -->
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="name">JaeGoo Choy</div>
+        <div class="bio">
+          <p>
+            I am a Ph.D. student at the
+            <a href="https://rllab.snu.ac.kr">Robot Learning Laboratory (RLLAB)</a>,
+            Seoul National University, advised by Prof.
+            <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>.
+            My research interests lie in robotics, 3D vision, and reinforcement learning.
+          </p>
         </div>
+        <div class="icon-links" style="padding-top: 5px;">
+          <a href="mailto:jaegu.choy@rllab.snu.ac.kr"><i class="fas fa-envelope"></i> Email</a>
+          <a href="https://scholar.google.com/citations?user=p18VKWgAAAAJ"><i class="ai ai-google-scholar"></i> Scholar</a>
+          <a href="https://github.com/choonsik93"><i class="fab fa-github"></i> GitHub</a>
+          <a href="cv.pdf"><i class="fas fa-file"></i> CV</a>
+        </div>
+      </div>
+      <div class="col-sm-4 portrait-col" style="text-align: center;">
+        <img class="portrait" src="images/portrait.jpg" alt="JaeGoo Choy">
+      </div>
+    </div>
 
-        <div class="column">
-          <h1 class="title">
-            <b>{{ site.name }}</b>
-          </h1>
-          <div class="content has-text-justified">
-            {{ site.description }}
-            <div class="buttons">
-              <a class="external-link button is-light" href="cv.pdf">
-                <span class="icon"><i class="fas fa-file"></i></span>
-                <span>CV</span>
-              </a>
+    <hr>
 
-              <a class="external-link button is-light"
-                href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
-                <span class="icon"><i class="ai ai-google-scholar"></i></span>
-                <span>Scholar</span>
-              </a>
+    <!-- Publications -->
+    <div class="section-title">Publications</div>
 
-              <a class="external-link button is-light" href="https://github.com/{{ site.github_username }}">
-                <span class="icon"><i class="fab fa-github"></i></span>
-                <span>Github</span>
-              </a>
-
-            </div>
-
-          </div>
+    <!-- U3DPD - IROS 2024 -->
+    <div class="row pub-row">
+      <div class="col-sm-3">
+        <img class="pub-img" src="images/u3dpd.jpg" width="100%" alt="U3DPD">
+      </div>
+      <div class="col-sm-9">
+        <div class="pub-title">
+          <a href="https://choonsik93.github.io/artnerf/">Unsupervised 3D Part Decomposition via Leveraged Gaussian Splatting</a>
+        </div>
+        <div class="pub-authors">
+          <b>JaeGoo Choy</b>,
+          <a href="https://scholar.google.com/citations?user=1uQa-hoAAAAJ&hl=ko">Geonho Cha</a>,
+          <a href="https://scholar.google.com.au/citations?user=NSCVmcIAAAAJ&hl=ja">Hogun Kee</a>,
+          <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>
+        </div>
+        <div class="pub-venue"><em>IROS, 2024</em></div>
+        <div class="pub-links">
+          <a href="https://choonsik93.github.io/artnerf/">Project Page</a> /
+          <a href="https://choonsik93.github.io/artnerf/static/pdfs/2024_iros_u3dpd.pdf">PDF</a> /
+          <a href="https://github.com/choonsik93/ArtGS">Code</a>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- News. -->
-  <div class="hr">
-    <div class="container">
-      <hr>
+    <!-- SDFGCQN - ICRA 2023 -->
+    <div class="row pub-row">
+      <div class="col-sm-3">
+        <img class="pub-img" src="images/sdfgcqn.jpg" width="100%" alt="SDFGCQN">
+      </div>
+      <div class="col-sm-9">
+        <div class="pub-title">SDF-Based Graph Convolutional Q-Networks for Rearrangement of Multiple Objects</div>
+        <div class="pub-authors">
+          <a href="https://scholar.google.com.au/citations?user=NSCVmcIAAAAJ&hl=ja">Hogun Kee</a>,
+          <a href="https://scholar.google.com/citations?user=PA4V2oEAAAAJ&hl=ko">Minjae Kang</a>,
+          <a href="https://scholar.google.com/citations?user=6Fi5cCcAAAAJ&hl=ko">Dohyeong Kim</a>,
+          <b>JaeGoo Choy</b>,
+          <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>
+        </div>
+        <div class="pub-venue"><em>ICRA, 2023</em></div>
+        <div class="pub-links">
+          <a href="https://rllab.snu.ac.kr/publications/papers/2023_icra_sdfgcn.pdf">PDF</a>
+        </div>
+      </div>
     </div>
+
+    <!-- MCPD - RA-L / IROS 2022 -->
+    <div class="row pub-row">
+      <div class="col-sm-3">
+        <img class="pub-img" src="images/mcpd.jpg" width="100%" alt="MCPD">
+      </div>
+      <div class="col-sm-9">
+        <div class="pub-title">
+          <a href="https://choonsik93.github.io/mcpd.github.io/">Unsupervised 3D Link Segmentation of Articulated Objects with a Mixture of Coherent Point Drift</a>
+        </div>
+        <div class="pub-authors">
+          <b>JaeGoo Choy</b>,
+          <a href="https://scholar.google.com/citations?user=1uQa-hoAAAAJ&hl=ko">Geonho Cha</a>,
+          <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>
+        </div>
+        <div class="pub-venue"><em>IEEE RA-L / IROS, 2022</em></div>
+        <div class="pub-links">
+          <a href="https://choonsik93.github.io/mcpd.github.io/">Project Page</a> /
+          <a href="https://choonsik93.github.io/mcpd.github.io/static/pdfs/2022_iros_artcpd.pdf">PDF</a> /
+          <a href="https://github.com/choonsik93/mcpd">Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- No-Regret - IROS 2020 -->
+    <div class="row pub-row">
+      <div class="col-sm-3">
+        <img class="pub-img" src="images/noregret.jpg" width="100%" alt="No-Regret">
+      </div>
+      <div class="col-sm-9">
+        <div class="pub-title">No-Regret Shannon Entropy Regularized Neural Contextual Bandit Online Learning for Robotic Grasping</div>
+        <div class="pub-authors">
+          <a href="https://scholar.google.com/citations?user=OZZJagIAAAAJ&hl=ko">Kyungjae Lee</a>,
+          <b>JaeGoo Choy</b>,
+          <a href="https://ececyh.github.io/">Yunho Choi</a>,
+          <a href="https://scholar.google.com.au/citations?user=NSCVmcIAAAAJ&hl=ja">Hogun Kee</a>,
+          <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>
+        </div>
+        <div class="pub-venue"><em>IROS, 2020</em></div>
+        <div class="pub-links">
+          <a href="https://rllab.snu.ac.kr/publications/papers/2020_iros_sern.pdf">PDF</a> /
+          <a href="https://www.youtube.com/watch?v=wRZcKcv5nbw">Video</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sparse Actor-Critic - UR 2020 -->
+    <div class="row pub-row">
+      <div class="col-sm-3">
+        <img class="pub-img" src="images/sparseac.jpg" width="100%" alt="Sparse AC">
+      </div>
+      <div class="col-sm-9">
+        <div class="pub-title">Sparse Actor-Critic: Sparse Tsallis Entropy Regularized Reinforcement Learning in a Continuous Action Space</div>
+        <div class="pub-authors">
+          <b>JaeGoo Choy</b>,
+          <a href="https://scholar.google.com/citations?user=OZZJagIAAAAJ&hl=ko">Kyungjae Lee</a>,
+          <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>
+        </div>
+        <div class="pub-venue"><em>UR, 2020</em></div>
+        <div class="pub-links">
+          <a href="https://rllab.snu.ac.kr/publications/papers/2020_ur_sparseac.pdf">PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hierarchical 6-DoF Grasping - ICRA 2020 -->
+    <div class="row pub-row">
+      <div class="col-sm-3">
+        <video class="pub-video" muted autoplay loop playsinline>
+          <source src="images/gads.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="col-sm-9">
+        <div class="pub-title">Hierarchical 6-DoF Grasping with Approaching Direction Selection</div>
+        <div class="pub-authors">
+          <a href="https://ececyh.github.io/">Yunho Choi</a>,
+          <a href="https://scholar.google.com.au/citations?user=NSCVmcIAAAAJ&hl=ja">Hogun Kee</a>,
+          <a href="https://scholar.google.com/citations?user=OZZJagIAAAAJ&hl=ko">Kyungjae Lee</a>,
+          <b>JaeGoo Choy</b>,
+          <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>
+        </div>
+        <div class="pub-venue"><em>ICRA, 2020</em></div>
+        <div class="pub-links">
+          <a href="https://rllab.snu.ac.kr/publications/papers/2020_icra_gads.pdf">PDF</a> /
+          <a href="https://www.youtube.com/watch?v=UAqcV1DeRjE">Video</a>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Education -->
+    <div class="section-title">Education</div>
+
+    <div class="edu-entry">
+      <b>Seoul National University</b><br>
+      Ph.D. in Electrical and Computer Engineering, advised by
+      <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Prof. Songhwai Oh</a>.<br>
+      <i>Sep 2017 - Present</i>
+    </div>
+
+    <div class="edu-entry">
+      <b>Seoul National University</b><br>
+      B.S. in Electrical and Computer Engineering. Graduated <b>Summa Cum Laude</b>.<br>
+      <i>Mar 2011 - Aug 2017</i>
+    </div>
+
+    <hr>
+
+    <div class="footer-text">
+      Template from <a href="https://jonbarron.info/">Jon Barron</a>.
+    </div>
+
   </div>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3">News</h2>
-      <div class="content">
-        <ul>
-          {% for item in site.data.news %}
-          <li>
-            <b>{{ item.date }}</b>: {{ item.description | markdownify | remove: '<p>' | remove: '</p>' }}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Publications. -->
-  <div class="hr">
-    <div class="container">
-      <hr>
-    </div>
-  </div>
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3">Publications</h2>
-
-      {% for pub in site.data.publications %}
-      <div class="columns is-vcentered publication-row">
-        <div class="column is-2">
-          <div class="publication-mousecell">
-            {% if pub.image_mouseover %}
-            <video class="is-rounded" width="100%" height="100%" muted autoplay loop>
-              <source src="{{ '/images/' | append: pub.image_mouseover | relative_url }}" type="video/mp4">
-            </video>
-            {% endif %}
-            {% if pub.image %}
-            <img class="is-rounded" src="{{ '/images/' | append: pub.image | relative_url }}" />
-            {% endif %}
-          </div>
-        </div>
-        <div class="column">
-          <div class="content">
-            <h3>
-              {% if pub.project_page %}
-              <a href="{{ pub.project_page }}">{{ pub.title }}</a>
-              {% else %}
-              {{ pub.title }}
-              {% endif %}
-            </h3>
-            <div class="publication-authors">
-              {% for author_key in pub.authors %}
-                {% assign author = site.data.authors[author_key] %}
-                {% if author %}
-                  <span class="author-block">
-                    {% if author.is_me %}
-                      <b>{{ author.first_name }} {{ author.last_name }}</b>
-                    {% elsif author.website %}
-                      <a href="{{ author.website }}">{{ author.first_name }} {{ author.last_name }}</a>
-                    {% else %}
-                      {{ author.first_name }} {{ author.last_name }}
-                    {% endif %}
-                  </span>{% unless forloop.last %}, {% endunless %}
-                {% endif %}
-              {% endfor %}
-            </div>
-            <div class="publication-venue">
-              <b>{{ pub.venue }}</b>
-              {% for award in pub.awards %}
-                <span class="publication-award">{{ award }}</span>
-              {% endfor %}
-            </div>
-            <!-- Publication Links. -->
-            <div class="publication-links">
-              {% if pub.project_page %}
-              <span class="link-block">
-                <a class="external-link button is-small is-rounded is-link" href="{{ pub.project_page }}">
-                  <span class="icon"><i class="fas fa-globe-asia"></i></span>
-                  <span>Project Page</span>
-                </a>
-              </span>
-              {% endif %}
-              {% if pub.pdf %}
-              <span class="link-block">
-                <a class="external-link button is-small is-rounded is-link" href="{{ pub.pdf }}">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>PDF</span>
-                </a>
-              </span>
-              {% endif %}
-              {% if pub.arxiv %}
-              <span class="link-block">
-                <a class="external-link button is-small is-rounded is-link" href="https://arxiv.org/abs/{{ pub.arxiv }}">
-                  <span class="icon"><i class="ai ai-arxiv"></i></span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              {% endif %}
-              {% if pub.video %}
-              <span class="link-block">
-                <a class="external-link button is-small is-rounded is-link" href="{{ pub.video }}">
-                  <span class="icon"><i class="fab fa-youtube"></i></span>
-                  <span>Video</span>
-                </a>
-              </span>
-              {% endif %}
-              {% if pub.github %}
-              <span class="link-block">
-                <a class="external-link button is-small is-rounded is-link" href="https://github.com/{{ pub.github }}">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Code</span>
-                </a>
-              </span>
-              {% endif %}
-            </div>
-            <!--/ Publication Links. -->
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-
-    </div>
-  </section>
-
-  <!-- Education. -->
-  <div class="hr">
-    <div class="container">
-      <hr>
-    </div>
-  </div>
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3">Education</h2>
-      {% for edu in site.data.education %}
-      <div class="columns is-vcentered">
-        <div class="column">
-          <div class="content">
-            <h4>{{ edu.name }}</h4>
-            <p>{{ edu.description }} <br><i>{{ edu.dates }}</i></p>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <a href="mailto:{{ site.email }}">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://github.com/{{ site.github_username }}" class="external-link">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}" class="external-link">
-          <i class="ai ai-google-scholar"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

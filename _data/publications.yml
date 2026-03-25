@@ -56,6 +56,7 @@
   title: "Sparse Actor-Critic: Sparse Tsallis Entropy Regularized Reinforcement Learning in a Continuous Action Space"
   venue: UR, 2020
   description: "We propose sparse actor-critic that uses Tsallis entropy regularization for continuous action space RL."
+  pdf: "https://rllab.snu.ac.kr/publications/papers/2020_ur_sparseac.pdf"
   image: sparseac.jpg
   authors:
     - jaegoo
