@@ -3,6 +3,7 @@
   venue: IROS, 2024
   description: "We propose a method for unsupervised 3D part decomposition of articulated objects using Gaussian Splatting."
   project_page: "https://choonsik93.github.io/artnerf/"
+  pdf: "https://choonsik93.github.io/artnerf/static/pdfs/2024_iros_u3dpd.pdf"
   github: choonsik93/ArtGS
   image: u3dpd.jpg
   authors:
@@ -15,6 +16,7 @@
   title: "SDF-Based Graph Convolutional Q-Networks for Rearrangement of Multiple Objects"
   venue: ICRA, 2023
   description: "A graph convolutional Q-network utilizing signed distance functions for multi-object rearrangement tasks."
+  pdf: "https://rllab.snu.ac.kr/publications/papers/2023_icra_sdfgcn.pdf"
   image: sdfgcqn.jpg
   authors:
     - hogun
@@ -28,6 +30,7 @@
   venue: IEEE RA-L / IROS, 2022
   description: "We present a mixture of coherent point drift method for unsupervised 3D link segmentation of articulated objects."
   project_page: "https://choonsik93.github.io/mcpd.github.io/"
+  pdf: "https://choonsik93.github.io/mcpd.github.io/static/pdfs/2022_iros_artcpd.pdf"
   github: choonsik93/mcpd
   image: mcpd.jpg
   authors:

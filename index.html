@@ -167,6 +167,14 @@ layout: null
                 </a>
               </span>
               {% endif %}
+              {% if pub.pdf %}
+              <span class="link-block">
+                <a class="external-link button is-small is-rounded is-link" href="{{ pub.pdf }}">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>PDF</span>
+                </a>
+              </span>
+              {% endif %}
               {% if pub.arxiv %}
               <span class="link-block">
                 <a class="external-link button is-small is-rounded is-link" href="https://arxiv.org/abs/{{ pub.arxiv }}">
