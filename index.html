@@ -1,0 +1,237 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>{{ site.name }}</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  {% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
+  <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
+  <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
+  <script src="{{ '/js/index.js' | relative_url }}"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body container is-max-desktop">
+      <div class="columns is-vcentered">
+
+        <div class="column is-4">
+          <div class="portrait">
+            <img src="{{ '/images/portrait.jpg' | relative_url }}" />
+          </div>
+        </div>
+
+        <div class="column">
+          <h1 class="title">
+            <b>{{ site.name }}</b>
+          </h1>
+          <div class="content has-text-justified">
+            {{ site.description }}
+            <div class="buttons">
+              <a class="external-link button is-light" href="cv.pdf">
+                <span class="icon"><i class="fas fa-file"></i></span>
+                <span>CV</span>
+              </a>
+
+              <a class="external-link button is-light"
+                href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
+                <span class="icon"><i class="ai ai-google-scholar"></i></span>
+                <span>Scholar</span>
+              </a>
+
+              <a class="external-link button is-light" href="https://github.com/{{ site.github_username }}">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Github</span>
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News. -->
+  <div class="hr">
+    <div class="container">
+      <hr>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">News</h2>
+      <div class="content">
+        <ul>
+          {% for item in site.data.news %}
+          <li>
+            <b>{{ item.date }}</b>: {{ item.description | markdownify | remove: '<p>' | remove: '</p>' }}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications. -->
+  <div class="hr">
+    <div class="container">
+      <hr>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Publications</h2>
+
+      {% for pub in site.data.publications %}
+      <div class="columns is-vcentered publication-row">
+        <div class="column is-2">
+          <div class="publication-mousecell">
+            {% if pub.image_mouseover %}
+            <video class="is-rounded" width="100%" height="100%" muted autoplay loop>
+              <source src="{{ '/images/' | append: pub.image_mouseover | relative_url }}" type="video/mp4">
+            </video>
+            {% endif %}
+            {% if pub.image %}
+            <img class="is-rounded" src="{{ '/images/' | append: pub.image | relative_url }}" />
+            {% endif %}
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <h3>
+              {% if pub.project_page %}
+              <a href="{{ pub.project_page }}">{{ pub.title }}</a>
+              {% else %}
+              {{ pub.title }}
+              {% endif %}
+            </h3>
+            <div class="publication-authors">
+              {% for author_key in pub.authors %}
+                {% assign author = site.data.authors[author_key] %}
+                {% if author %}
+                  <span class="author-block">
+                    {% if author.is_me %}
+                      <b>{{ author.first_name }} {{ author.last_name }}</b>
+                    {% elsif author.website %}
+                      <a href="{{ author.website }}">{{ author.first_name }} {{ author.last_name }}</a>
+                    {% else %}
+                      {{ author.first_name }} {{ author.last_name }}
+                    {% endif %}
+                  </span>{% unless forloop.last %}, {% endunless %}
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="publication-venue">
+              <b>{{ pub.venue }}</b>
+              {% for award in pub.awards %}
+                <span class="publication-award">{{ award }}</span>
+              {% endfor %}
+            </div>
+            <!-- Publication Links. -->
+            <div class="publication-links">
+              {% if pub.project_page %}
+              <span class="link-block">
+                <a class="external-link button is-small is-rounded is-link" href="{{ pub.project_page }}">
+                  <span class="icon"><i class="fas fa-globe-asia"></i></span>
+                  <span>Project Page</span>
+                </a>
+              </span>
+              {% endif %}
+              {% if pub.arxiv %}
+              <span class="link-block">
+                <a class="external-link button is-small is-rounded is-link" href="https://arxiv.org/abs/{{ pub.arxiv }}">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              {% endif %}
+              {% if pub.github %}
+              <span class="link-block">
+                <a class="external-link button is-small is-rounded is-link" href="https://github.com/{{ pub.github }}">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              {% endif %}
+            </div>
+            <!--/ Publication Links. -->
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </section>
+
+  <!-- Education. -->
+  <div class="hr">
+    <div class="container">
+      <hr>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Education</h2>
+      {% for edu in site.data.education %}
+      <div class="columns is-vcentered">
+        <div class="column">
+          <div class="content">
+            <h4>{{ edu.name }}</h4>
+            <p>{{ edu.description }} <br><i>{{ edu.dates }}</i></p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a href="mailto:{{ site.email }}">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/{{ site.github_username }}" class="external-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}" class="external-link">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

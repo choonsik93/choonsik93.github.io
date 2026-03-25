@@ -1,0 +1,23 @@
+title: JaeGoo Choy
+name: JaeGoo Choy
+position: Ph.D. Student
+email: jaegu.choy@rllab.snu.ac.kr
+description: >-
+  I am a Ph.D. student at the <a href="https://rllab.snu.ac.kr">Robot Learning Laboratory (RLLAB)</a>,
+  Seoul National University, advised by Prof. <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>.
+  My research interests lie in robotics, 3D vision, and reinforcement learning.
+
+baseurl: ""
+url:
+twitter_username:
+github_username: choonsik93
+google_scholar: p18VKWgAAAAJ
+google_analytics:
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+sass:
+  style: compact
