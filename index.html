@@ -128,20 +128,38 @@
     <div class="section-title">Projects</div>
 
     <div class="row pub-row">
-      <div class="col-sm-3">
-        <div class="pub-thumb">
-          <img class="pub-img" src="images/sequor_robotics_logo.jpeg" alt="Sequor Showroom">
-        </div>
-      </div>
-      <div class="col-sm-9">
+      <div class="col-sm-12">
         <div class="pub-title">
-          <a href="https://sequor-showroom.com">Sequor Showroom</a>
+          <a href="https://sequor-showroom.com">Multiscale Octree Voxel Mapping from Monocular Video</a>
         </div>
         <div class="pub-authors">
-          <a href="https://www.sequorrobotics.com/">Sequor Robotics</a>
+          At <a href="https://www.sequorrobotics.com/">Sequor Robotics</a>
         </div>
-        <p class="pub-desc">A vision-based robotic showroom demo built at Sequor Robotics.</p>
-        <div class="pub-links">
+        <p class="pub-desc">
+          We build multiscale octree voxel maps from a single monocular video.
+          From the captured scene, we first construct an octree image feature voxel map, then decode it to produce a color octree voxel map and a semantic octree voxel map.
+        </p>
+        <div style="display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 200px; text-align: center;">
+            <video class="pub-video" style="width:100%; height:auto; object-fit:contain; background-color:#000;" muted autoplay loop playsinline>
+              <source src="images/guro_octfeat_orbit.mp4" type="video/mp4">
+            </video>
+            <div style="font-size:12px; color:#666; margin-top:4px;">Image Feature Voxel Map</div>
+          </div>
+          <div style="flex: 1; min-width: 200px; text-align: center;">
+            <video class="pub-video" style="width:100%; height:auto; object-fit:contain; background-color:#000;" muted autoplay loop playsinline>
+              <source src="images/guro_octcolor_orbit.mp4" type="video/mp4">
+            </video>
+            <div style="font-size:12px; color:#666; margin-top:4px;">Color Voxel Map</div>
+          </div>
+          <div style="flex: 1; min-width: 200px; text-align: center;">
+            <video class="pub-video" style="width:100%; height:auto; object-fit:contain; background-color:#000;" muted autoplay loop playsinline>
+              <source src="images/guro_octsemantic_orbit.mp4" type="video/mp4">
+            </video>
+            <div style="font-size:12px; color:#666; margin-top:4px;">Semantic Voxel Map</div>
+          </div>
+        </div>
+        <div class="pub-links" style="margin-top:8px;">
           <a href="https://sequor-showroom.com">Website</a>
         </div>
       </div>
