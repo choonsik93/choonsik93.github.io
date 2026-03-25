@@ -7,37 +7,51 @@
   <title>JaeGoo Choy</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     body {
-      font-family: 'Noto Sans', sans-serif;
-      font-size: 15px;
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
       padding-top: 20px;
     }
     .container {
-      max-width: 850px;
+      max-width: 800px;
     }
     a { color: #1772d0; }
     a:hover { color: #f09228; text-decoration: none; }
-    .name { font-size: 28px; font-weight: 700; padding-bottom: 8px; }
+    .name { font-size: 32px; font-weight: 700; padding-bottom: 8px; }
     .bio { text-align: justify; }
     .section-title { font-size: 22px; font-weight: 700; padding-top: 10px; padding-bottom: 5px; }
     .pub-row { padding-bottom: 20px; }
-    .pub-title { font-weight: 600; font-size: 15px; }
+    .pub-title { font-weight: 700; font-size: 14px; }
     .pub-authors { font-size: 14px; }
     .pub-venue { font-size: 14px; }
+    .pub-desc { font-size: 14px; margin-top: 2px; margin-bottom: 2px; }
     .pub-links { font-size: 13px; padding-top: 3px; }
     .pub-links a { margin-right: 8px; }
-    .pub-img { border: 1px solid #ddd; border-radius: 4px; }
-    .pub-img:hover { opacity: 0.85; }
+    .pub-img {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+    }
     .pub-video {
       border: 1px solid #ddd;
       border-radius: 4px;
-      width: 100%;
-      height: auto;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+    }
+    .pub-thumb {
+      width: 160px;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .portrait {
       border-radius: 50%;
@@ -50,12 +64,26 @@
       color: #333;
     }
     .icon-links a:hover { color: #1772d0; }
-    .edu-entry { padding-bottom: 8px; }
-    hr { border-top: 1px solid #ddd; }
+    .exp-entry { padding: 10px 0; }
+    .exp-logo {
+      width: 120px;
+      height: auto;
+      max-height: 80px;
+      object-fit: contain;
+    }
+    .edu-logo {
+      width: 80px;
+      height: auto;
+      object-fit: contain;
+    }
+    hr { border: 0; height: 1px; background-color: #dfdfdf; margin-top: 10px; margin-bottom: 10px; }
     .footer-text { font-size: 12px; color: #999; text-align: center; padding: 20px 0; }
     @media (max-width: 768px) {
       .portrait-col { text-align: center; padding-bottom: 20px; }
       .portrait { max-width: 160px; }
+      .pub-img, .pub-video { width: 120px; height: 120px; }
+      .pub-thumb { width: 120px; height: 120px; }
+      .exp-logo { width: 80px; }
     }
   </style>
 </head>
@@ -100,7 +128,11 @@
     <!-- U3DPD - IROS 2024 -->
     <div class="row pub-row">
       <div class="col-sm-3">
-        <img class="pub-img" src="images/u3dpd.jpg" width="100%" alt="U3DPD">
+        <div class="pub-thumb">
+          <video class="pub-video" muted autoplay loop playsinline>
+            <source src="images/u3dpd.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
       <div class="col-sm-9">
         <div class="pub-title">
@@ -113,7 +145,7 @@
           <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>
         </div>
         <div class="pub-venue"><em>IROS, 2024</em></div>
-        <p style="font-size:14px;">We decompose articulated objects into 3D parts in an unsupervised manner by leveraging Gaussian Splatting with part-aware motion grouping.</p>
+        <p class="pub-desc">We decompose articulated objects into 3D parts in an unsupervised manner by leveraging Gaussian Splatting with part-aware motion grouping.</p>
         <div class="pub-links">
           <a href="https://choonsik93.github.io/artnerf/">Project Page</a> /
           <a href="https://choonsik93.github.io/artnerf/static/pdfs/2024_iros_u3dpd.pdf">PDF</a> /
@@ -125,7 +157,9 @@
     <!-- SDFGCQN - ICRA 2023 -->
     <div class="row pub-row">
       <div class="col-sm-3">
-        <img class="pub-img" src="images/sdfgcqn.jpg" width="100%" alt="SDFGCQN">
+        <div class="pub-thumb">
+          <img class="pub-img" src="images/sdfgcqn.jpg" alt="SDFGCQN">
+        </div>
       </div>
       <div class="col-sm-9">
         <div class="pub-title">SDF-Based Graph Convolutional Q-Networks for Rearrangement of Multiple Objects</div>
@@ -137,7 +171,7 @@
           <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>
         </div>
         <div class="pub-venue"><em>ICRA, 2023</em></div>
-        <p style="font-size:14px;">We use signed distance function representations with graph convolutional Q-networks to efficiently plan multi-object rearrangement.</p>
+        <p class="pub-desc">We use signed distance function representations with graph convolutional Q-networks to efficiently plan multi-object rearrangement.</p>
         <div class="pub-links">
           <a href="https://rllab.snu.ac.kr/publications/papers/2023_icra_sdfgcn.pdf">PDF</a>
         </div>
@@ -147,7 +181,11 @@
     <!-- MCPD - RA-L / IROS 2022 -->
     <div class="row pub-row">
       <div class="col-sm-3">
-        <img class="pub-img" src="images/mcpd.jpg" width="100%" alt="MCPD">
+        <div class="pub-thumb">
+          <video class="pub-video" muted autoplay loop playsinline>
+            <source src="images/mcpd.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
       <div class="col-sm-9">
         <div class="pub-title">
@@ -159,7 +197,7 @@
           <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>
         </div>
         <div class="pub-venue"><em>IEEE RA-L / IROS, 2022</em></div>
-        <p style="font-size:14px;">We propose a mixture of coherent point drift framework that segments articulated objects into rigid links from point clouds without supervision.</p>
+        <p class="pub-desc">We propose a mixture of coherent point drift framework that segments articulated objects into rigid links from point clouds without supervision.</p>
         <div class="pub-links">
           <a href="https://choonsik93.github.io/mcpd.github.io/">Project Page</a> /
           <a href="https://choonsik93.github.io/mcpd.github.io/static/pdfs/2022_iros_artcpd.pdf">PDF</a> /
@@ -171,7 +209,9 @@
     <!-- No-Regret - IROS 2020 -->
     <div class="row pub-row">
       <div class="col-sm-3">
-        <img class="pub-img" src="images/noregret.jpg" width="100%" alt="No-Regret">
+        <div class="pub-thumb">
+          <img class="pub-img" src="images/noregret.jpg" alt="No-Regret">
+        </div>
       </div>
       <div class="col-sm-9">
         <div class="pub-title">No-Regret Shannon Entropy Regularized Neural Contextual Bandit Online Learning for Robotic Grasping</div>
@@ -183,7 +223,7 @@
           <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>
         </div>
         <div class="pub-venue"><em>IROS, 2020</em></div>
-        <p style="font-size:14px;">We apply Shannon entropy regularized contextual bandits for sample-efficient online learning of robotic grasping policies.</p>
+        <p class="pub-desc">We apply Shannon entropy regularized contextual bandits for sample-efficient online learning of robotic grasping policies.</p>
         <div class="pub-links">
           <a href="https://rllab.snu.ac.kr/publications/papers/2020_iros_sern.pdf">PDF</a> /
           <a href="https://www.youtube.com/watch?v=wRZcKcv5nbw">Video</a>
@@ -194,7 +234,9 @@
     <!-- Sparse Actor-Critic - UR 2020 -->
     <div class="row pub-row">
       <div class="col-sm-3">
-        <img class="pub-img" src="images/sparseac.jpg" width="100%" alt="Sparse AC">
+        <div class="pub-thumb">
+          <img class="pub-img" src="images/sparseac.jpg" alt="Sparse AC">
+        </div>
       </div>
       <div class="col-sm-9">
         <div class="pub-title">Sparse Actor-Critic: Sparse Tsallis Entropy Regularized Reinforcement Learning in a Continuous Action Space</div>
@@ -204,7 +246,7 @@
           <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>
         </div>
         <div class="pub-venue"><em>UR, 2020</em></div>
-        <p style="font-size:14px;">We introduce a sparse actor-critic method using Tsallis entropy regularization that yields sparse, interpretable policies in continuous action spaces.</p>
+        <p class="pub-desc">We introduce a sparse actor-critic method using Tsallis entropy regularization that yields sparse, interpretable policies in continuous action spaces.</p>
         <div class="pub-links">
           <a href="https://rllab.snu.ac.kr/publications/papers/2020_ur_sparseac.pdf">PDF</a>
         </div>
@@ -214,9 +256,11 @@
     <!-- Hierarchical 6-DoF Grasping - ICRA 2020 -->
     <div class="row pub-row">
       <div class="col-sm-3">
-        <video class="pub-video" muted autoplay loop playsinline>
-          <source src="images/gads.mp4" type="video/mp4">
-        </video>
+        <div class="pub-thumb">
+          <video class="pub-video" muted autoplay loop playsinline>
+            <source src="images/gads.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
       <div class="col-sm-9">
         <div class="pub-title">Hierarchical 6-DoF Grasping with Approaching Direction Selection</div>
@@ -228,7 +272,7 @@
           <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>
         </div>
         <div class="pub-venue"><em>ICRA, 2020</em></div>
-        <p style="font-size:14px;">We propose a hierarchical grasping framework that first selects an approaching direction and then predicts a 6-DoF grasp pose for robust bin picking.</p>
+        <p class="pub-desc">We propose a hierarchical grasping framework that first selects an approaching direction and then predicts a 6-DoF grasp pose for robust bin picking.</p>
         <div class="pub-links">
           <a href="https://rllab.snu.ac.kr/publications/papers/2020_icra_gads.pdf">PDF</a> /
           <a href="https://www.youtube.com/watch?v=UAqcV1DeRjE">Video</a>
@@ -241,24 +285,24 @@
     <!-- Experience -->
     <div class="section-title">Experience</div>
 
-    <div class="edu-entry">
+    <div class="exp-entry">
       <div class="row">
-        <div class="col-xs-2 col-sm-1" style="padding-top:2px;">
-          <img src="images/carbon_black_logo.jpg" width="100%" style="max-width:45px;" alt="Carbon Black Group">
+        <div class="col-xs-3 col-sm-2" style="text-align:center; padding:10px;">
+          <img class="exp-logo" src="images/carbon_black_logo.jpg" alt="Carbon Black Group">
         </div>
-        <div class="col-xs-10 col-sm-11">
+        <div class="col-xs-9 col-sm-10" style="padding:10px;">
           <a href="https://www.carbonblackgroup.com/"><b>Carbon Black Group</b></a><br>
           <i>Dec 2025 - Present</i>
         </div>
       </div>
     </div>
 
-    <div class="edu-entry">
+    <div class="exp-entry">
       <div class="row">
-        <div class="col-xs-2 col-sm-1" style="padding-top:2px;">
-          <img src="images/sequor_robotics_logo.jpeg" width="100%" style="max-width:45px;" alt="Sequor Robotics">
+        <div class="col-xs-3 col-sm-2" style="text-align:center; padding:10px;">
+          <img class="exp-logo" src="images/sequor_robotics_logo.jpeg" alt="Sequor Robotics">
         </div>
-        <div class="col-xs-10 col-sm-11">
+        <div class="col-xs-9 col-sm-10" style="padding:10px;">
           <a href="https://www.sequorrobotics.com/"><b>Sequor Robotics</b></a><br>
           <i>Mar 2024 - Nov 2025</i>
         </div>
@@ -270,12 +314,12 @@
     <!-- Education -->
     <div class="section-title">Education</div>
 
-    <div class="edu-entry">
+    <div class="exp-entry">
       <div class="row">
-        <div class="col-xs-2 col-sm-1" style="padding-top:2px;">
-          <img src="images/snu_logo.png" width="100%" style="max-width:45px;" alt="SNU">
+        <div class="col-xs-3 col-sm-2" style="text-align:center; padding:10px;">
+          <img class="edu-logo" src="images/snu_logo.png" alt="SNU">
         </div>
-        <div class="col-xs-10 col-sm-11">
+        <div class="col-xs-9 col-sm-10" style="padding:10px;">
           <b>Seoul National University</b><br>
           Ph.D. in Electrical and Computer Engineering, advised by
           <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Prof. Songhwai Oh</a>.<br>
@@ -284,12 +328,12 @@
       </div>
     </div>
 
-    <div class="edu-entry">
+    <div class="exp-entry">
       <div class="row">
-        <div class="col-xs-2 col-sm-1" style="padding-top:2px;">
-          <img src="images/snu_logo.png" width="100%" style="max-width:45px;" alt="SNU">
+        <div class="col-xs-3 col-sm-2" style="text-align:center; padding:10px;">
+          <img class="edu-logo" src="images/snu_logo.png" alt="SNU">
         </div>
-        <div class="col-xs-10 col-sm-11">
+        <div class="col-xs-9 col-sm-10" style="padding:10px;">
           <b>Seoul National University</b><br>
           B.S. in Electrical and Computer Engineering.<br>
           <i>Mar 2011 - Aug 2017</i>
@@ -297,15 +341,15 @@
       </div>
     </div>
 
-    <div class="edu-entry">
+    <div class="exp-entry">
       <div class="row">
-        <div class="col-xs-2 col-sm-1" style="padding-top:2px;">
-          <img src="images/snu_logo.png" width="100%" style="max-width:45px;" alt="SNU">
+        <div class="col-xs-3 col-sm-2" style="text-align:center; padding:10px;">
+          <img class="edu-logo" src="images/snu_logo.png" alt="SNU">
         </div>
-        <div class="col-xs-10 col-sm-11">
+        <div class="col-xs-9 col-sm-10" style="padding:10px;">
           <b>Seoul National University</b><br>
           B.B.A. (Double Major), College of Business Administration.<br>
-          <i>Mar 2011 - Aug 2017</i>
+          <i>Mar 2013 - Aug 2017</i>
         </div>
       </div>
     </div>
